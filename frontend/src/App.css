@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.light-theme {
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+.dark-theme {
+  background-color: #0f172a;
+  color: white;
+}
+
+.light-theme .card {
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+.dark-theme .card {
+  background-color: #1e293b;
+  color: #ffffff;
+}

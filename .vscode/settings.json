@@ -1,0 +1,10 @@
+{
+    "editor.quickSuggestionsDelay": 1,
+    "terminal.integrated.suggest.quickSuggestions": {
+        "commands": "on",
+        "arguments": "on",
+        "unknown": "on"
+    },
+    "editor.suggest.selectionMode": "whenTriggerCharacter",
+    "search.quickOpen.includeSymbols": true
+}
