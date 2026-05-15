@@ -9,7 +9,7 @@ import {
     ResponsiveContainer, BarChart, Bar, Cell,
 } from "recharts";
 
-const API   = "http://localhost:5000/api/transactions";
+const API   = "https://rubiscape-admin-console.onrender.com/api/transactions";
 const token = () => localStorage.getItem("token");
 
 const monthlyData = [

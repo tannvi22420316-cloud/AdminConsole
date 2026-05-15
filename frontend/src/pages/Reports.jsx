@@ -6,7 +6,7 @@ import {
     ChevronRight, Sparkles,
 } from "lucide-react";
 
-const API   = "http://localhost:5000/api/reports";
+const API   = "https://rubiscape-admin-console.onrender.com/api/reports";
 const token = () => localStorage.getItem("token");
 
 const typeMeta = {

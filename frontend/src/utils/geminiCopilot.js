@@ -28,7 +28,7 @@ If something is not in the data, say so honestly. The admin's name is Tannvi.`;
     },
   };
 
-  const res = await fetch("http://localhost:5000/api/gemini/ask", {
+  const res = await fetch("https://rubiscape-admin-console.onrender.com/api/gemini/ask", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),

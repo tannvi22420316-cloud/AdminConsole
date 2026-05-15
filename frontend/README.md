@@ -133,7 +133,7 @@ npm install
 npm start
 ```
 
-The app will run at `http://localhost:3000`.
+The app will run at `https://rubiscape-admin-console.onrender.com`.
 
 ---
 

@@ -4,7 +4,7 @@ import {
     MapPin, Users, Calendar, Tag,
 } from "lucide-react";
 
-const API   = "http://localhost:5000/api/events";
+const API   = "https://rubiscape-admin-console.onrender.com/api/events";
 const token = () => localStorage.getItem("token");
 
 const DAYS   = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];

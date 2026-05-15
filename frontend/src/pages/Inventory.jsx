@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { RadialBarChart, RadialBar, ResponsiveContainer, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid } from "recharts";
 
-const API = "http://localhost:5000/api/inventory";
+const API = "https://rubiscape-admin-console.onrender.com/api/inventory";
 const token = () => localStorage.getItem("token");
 
 const categoryColors = {

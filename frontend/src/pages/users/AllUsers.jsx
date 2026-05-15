@@ -8,7 +8,7 @@ function AllUsers() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/admin/users", {
+    fetch("https://rubiscape-admin-console.onrender.com/api/admin/users", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     })
       .then((res) => res.json())

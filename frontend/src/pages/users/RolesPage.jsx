@@ -23,7 +23,7 @@ function RolesPage() {
 
   useEffect(() => {
     if (!token) return;
-    fetch("http://localhost:5000/api/roles", {
+    fetch("https://rubiscape-admin-console.onrender.com/api/roles", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(async (res) => {
@@ -58,7 +58,7 @@ function RolesPage() {
   const savePermissions = () => {
     if (!selectedRole?._id) return;
     setSaving(true);
-    fetch(`http://localhost:5000/api/roles/${selectedRole._id}`, {
+    fetch(`https://rubiscape-admin-console.onrender.com/api/roles/${selectedRole._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -5,7 +5,7 @@ import {
     Clock, Circle, CheckCheck, X, Reply, Forward,
 } from "lucide-react";
 
-const API   = "http://localhost:5000/api/messages";
+const API   = "https://rubiscape-admin-console.onrender.com/api/messages";
 const token = () => localStorage.getItem("token");
 
 const priorityMeta = {
