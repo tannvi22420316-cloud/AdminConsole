@@ -92,6 +92,13 @@ function AnalyticsReports() {
                                 <YAxis type="category" dataKey="category" stroke="#64748b" fontSize={11} tickLine={false} axisLine={false} width={90} />
                                 <Tooltip
                                     contentStyle={{ backgroundColor: "rgba(255,255,255,0.95)", border: "none", borderRadius: "12px", boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }}
+                                    labelStyle={{
+                                        color: "black",
+                                        fontWeight: "600",
+                                    }}
+                                    itemStyle={{
+                                        color: "black",
+                                    }}
                                     formatter={(v) => [`$${v.toLocaleString()}`, ""]}
                                 />
                                 <Bar dataKey="target" fill="#e2e8f0" radius={[0, 4, 4, 0]} maxBarSize={12} name="Target" />

@@ -60,7 +60,7 @@ function RevenueChart() {
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                         data={data}
-                        margine={{top: 20, right: 30, left: 20, bottom: 5}}
+                        margin={{top: 20, right: 30, left: 20, bottom: 5}}
                     >
                         <CartesianGrid
                             strokeDasharray="3 3"
@@ -89,7 +89,15 @@ function RevenueChart() {
                                 borderRadius: "12px",
                                 boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
                             }}
-                            formatter={(value) => [`$${value.toLocaleString()}`, ""]}
+                            labelStyle={{
+                                color: "black",
+                                fontWeight: "600",
+                            }}
+                            itemStyle={{
+                                color: "black",
+                            }}
+                            formatter={(value, name) => [`$${Number(value).toLocaleString()}`, name.charAt(0).toUpperCase() + name.slice(1)]}
+                            
                         />
                         <Bar
                             dataKey="revenue"
