@@ -5,14 +5,7 @@ const helmet = require("helmet");
 
 const connectDB = require("./config/db");
 
-const authRoutes = require("./routes/authRoutes");
-const adminRoutes = require("./routes/adminRoutes");
-const geminiRouter = require("./routes/gemini");
-
 const app = express();
-
-// Connect DB 
-connectDB();
 
 // Middleware
 app.use(cors());
@@ -35,8 +28,16 @@ app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
-// Server
+// Wait for DB before accepting any requests
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("MongoDB connection failed:", err.message);
+    process.exit(1); // Stop server if DB fails
+  });
